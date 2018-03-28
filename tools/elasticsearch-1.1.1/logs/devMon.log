@@ -1,0 +1,860 @@
+[2014-05-04 15:35:09,305][INFO ][node                     ] [huge] version[1.1.1], pid[12181], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-04 15:35:09,306][INFO ][node                     ] [huge] initializing ...
+[2014-05-04 15:35:09,321][INFO ][plugins                  ] [huge] loaded [], sites [head, bigdesk]
+[2014-05-04 15:35:11,499][INFO ][node                     ] [huge] initialized
+[2014-05-04 15:35:11,499][INFO ][node                     ] [huge] starting ...
+[2014-05-04 15:35:11,576][INFO ][transport                ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.226.62.47:9300]}
+[2014-05-04 15:35:41,588][WARN ][discovery                ] [huge] waited for 30s and no initial state was set by the discovery
+[2014-05-04 15:35:41,588][INFO ][discovery                ] [huge] devMon/VAi01bjOS6aUZwWrjYMpzw
+[2014-05-04 15:35:41,596][INFO ][http                     ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.226.62.47:9200]}
+[2014-05-04 15:35:41,632][INFO ][node                     ] [huge] started
+[2014-05-04 15:37:16,427][INFO ][node                     ] [huge] stopping ...
+[2014-05-04 15:37:16,443][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:120)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:72)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:56)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:704)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:671)
+	at org.elasticsearch.common.netty.channel.AbstractChannel.write(AbstractChannel.java:248)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:158)
+	at org.elasticsearch.rest.action.admin.cluster.health.RestClusterHealthAction$1.onFailure(RestClusterHealthAction.java:102)
+	at org.elasticsearch.action.support.TransportAction$ThreadedActionListener$2.run(TransportAction.java:117)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+[2014-05-04 15:37:16,443][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:120)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:72)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:56)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:704)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:671)
+	at org.elasticsearch.common.netty.channel.AbstractChannel.write(AbstractChannel.java:248)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:158)
+	at org.elasticsearch.rest.action.admin.cluster.state.RestClusterStateAction$1.onFailure(RestClusterStateAction.java:102)
+	at org.elasticsearch.action.support.TransportAction$ThreadedActionListener$2.run(TransportAction.java:117)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+[2014-05-04 15:37:16,450][INFO ][node                     ] [huge] stopped
+[2014-05-04 15:37:16,451][INFO ][node                     ] [huge] closing ...
+[2014-05-04 15:37:16,458][INFO ][node                     ] [huge] closed
+[2014-05-04 15:42:01,586][INFO ][node                     ] [huge] version[1.1.1], pid[12403], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-04 15:42:01,587][INFO ][node                     ] [huge] initializing ...
+[2014-05-04 15:42:01,607][INFO ][plugins                  ] [huge] loaded [], sites [head, bigdesk]
+[2014-05-04 15:42:03,963][INFO ][node                     ] [huge] initialized
+[2014-05-04 15:42:03,963][INFO ][node                     ] [huge] starting ...
+[2014-05-04 15:42:04,042][INFO ][transport                ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.226.62.47:9300]}
+[2014-05-04 15:42:07,133][INFO ][cluster.service          ] [huge] detected_master [gigantic][_pVXxoK5QFaERsVibwR33Q][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true}, added {[gigantic][_pVXxoK5QFaERsVibwR33Q][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true},}, reason: zen-disco-receive(from master [[gigantic][_pVXxoK5QFaERsVibwR33Q][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true}])
+[2014-05-04 15:42:07,147][INFO ][discovery                ] [huge] devMon/wEUsvQZlTeyo8T3o-4Jfvg
+[2014-05-04 15:42:07,153][INFO ][http                     ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.226.62.47:9200]}
+[2014-05-04 15:42:07,155][INFO ][node                     ] [huge] started
+[2014-05-04 15:42:16,829][WARN ][transport.netty          ] [huge] Message not fully read (response) for [10] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a2f9dd), error [true], resetting
+[2014-05-04 15:42:17,541][WARN ][transport.netty          ] [huge] Message not fully read (response) for [15] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a61c596), error [true], resetting
+[2014-05-04 15:42:17,546][WARN ][transport.netty          ] [huge] Message not fully read (response) for [16] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@8f30862), error [true], resetting
+[2014-05-04 15:42:17,551][WARN ][transport.netty          ] [huge] Message not fully read (response) for [17] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@bab5e85), error [true], resetting
+[2014-05-04 15:42:17,556][WARN ][transport.netty          ] [huge] Message not fully read (response) for [18] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1fca73bf), error [true], resetting
+[2014-05-04 15:42:17,561][WARN ][transport.netty          ] [huge] Message not fully read (response) for [19] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@247510e7), error [true], resetting
+[2014-05-04 15:42:17,591][WARN ][transport.netty          ] [huge] Message not fully read (response) for [24] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5e2b105d), error [true], resetting
+[2014-05-04 15:42:17,582][WARN ][transport.netty          ] [huge] Message not fully read (response) for [23] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@520b368f), error [true], resetting
+[2014-05-04 15:42:17,576][WARN ][transport.netty          ] [huge] Message not fully read (response) for [22] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5f43a515), error [true], resetting
+[2014-05-04 15:42:17,571][WARN ][transport.netty          ] [huge] Message not fully read (response) for [21] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6deee615), error [true], resetting
+[2014-05-04 15:42:17,567][WARN ][transport.netty          ] [huge] Message not fully read (response) for [20] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a8c064), error [true], resetting
+[2014-05-04 15:42:17,845][WARN ][transport.netty          ] [huge] Message not fully read (response) for [27] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@746ac18c), error [true], resetting
+[2014-05-04 15:42:17,849][WARN ][transport.netty          ] [huge] Message not fully read (response) for [28] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@cc90a0a), error [true], resetting
+[2014-05-04 15:42:17,854][WARN ][transport.netty          ] [huge] Message not fully read (response) for [29] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@62b21d14), error [true], resetting
+[2014-05-04 15:42:17,859][WARN ][transport.netty          ] [huge] Message not fully read (response) for [30] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1b933eab), error [true], resetting
+[2014-05-04 15:42:17,864][WARN ][transport.netty          ] [huge] Message not fully read (response) for [31] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2da2d3be), error [true], resetting
+[2014-05-04 15:42:18,183][WARN ][transport.netty          ] [huge] Message not fully read (response) for [35] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1c90a278), error [true], resetting
+[2014-05-04 15:42:18,187][WARN ][transport.netty          ] [huge] Message not fully read (response) for [36] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5b9a82ee), error [true], resetting
+[2014-05-04 15:42:18,191][WARN ][transport.netty          ] [huge] Message not fully read (response) for [37] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7d0a063d), error [true], resetting
+[2014-05-04 15:42:18,196][WARN ][transport.netty          ] [huge] Message not fully read (response) for [38] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1d1fceed), error [true], resetting
+[2014-05-04 15:42:18,200][WARN ][transport.netty          ] [huge] Message not fully read (response) for [39] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@134a388b), error [true], resetting
+[2014-05-04 15:42:18,204][WARN ][transport.netty          ] [huge] Message not fully read (response) for [40] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6dc63791), error [true], resetting
+[2014-05-04 15:42:18,208][WARN ][transport.netty          ] [huge] Message not fully read (response) for [41] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@51d7aa64), error [true], resetting
+[2014-05-04 15:42:18,213][WARN ][transport.netty          ] [huge] Message not fully read (response) for [42] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@25f3b536), error [true], resetting
+[2014-05-04 15:42:18,217][WARN ][transport.netty          ] [huge] Message not fully read (response) for [43] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@22fdffb1), error [true], resetting
+[2014-05-04 15:42:18,221][WARN ][transport.netty          ] [huge] Message not fully read (response) for [44] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@519dcf69), error [true], resetting
+[2014-05-04 15:42:18,225][WARN ][transport.netty          ] [huge] Message not fully read (response) for [45] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f9c205b), error [true], resetting
+[2014-05-04 15:42:18,229][WARN ][transport.netty          ] [huge] Message not fully read (response) for [46] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@13105f32), error [true], resetting
+[2014-05-04 15:42:19,065][WARN ][transport.netty          ] [huge] Message not fully read (response) for [49] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@15e6e48b), error [true], resetting
+[2014-05-04 15:42:19,069][WARN ][transport.netty          ] [huge] Message not fully read (response) for [50] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@69a66ce8), error [true], resetting
+[2014-05-04 15:42:19,073][WARN ][transport.netty          ] [huge] Message not fully read (response) for [51] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d382988), error [true], resetting
+[2014-05-04 15:42:19,076][WARN ][transport.netty          ] [huge] Message not fully read (response) for [52] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@422eb6e9), error [true], resetting
+[2014-05-04 15:42:19,109][WARN ][transport.netty          ] [huge] Message not fully read (response) for [57] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@33f323bd), error [true], resetting
+[2014-05-04 15:42:19,093][WARN ][transport.netty          ] [huge] Message not fully read (response) for [55] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@d5ba1ef), error [true], resetting
+[2014-05-04 15:42:19,084][WARN ][transport.netty          ] [huge] Message not fully read (response) for [54] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@62e596c9), error [true], resetting
+[2014-05-04 15:42:19,080][WARN ][transport.netty          ] [huge] Message not fully read (response) for [53] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@8ea9cf1), error [true], resetting
+[2014-05-04 15:42:19,487][WARN ][transport.netty          ] [huge] Message not fully read (response) for [86] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a9830bc), error [true], resetting
+[2014-05-04 15:42:19,491][WARN ][transport.netty          ] [huge] Message not fully read (response) for [87] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5b5034e0), error [true], resetting
+[2014-05-04 15:42:19,495][WARN ][transport.netty          ] [huge] Message not fully read (response) for [88] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@59cfb84c), error [true], resetting
+[2014-05-04 15:42:19,509][WARN ][transport.netty          ] [huge] Message not fully read (response) for [89] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1f143614), error [true], resetting
+[2014-05-04 15:42:19,515][WARN ][transport.netty          ] [huge] Message not fully read (response) for [91] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24e28347), error [true], resetting
+[2014-05-04 15:42:19,518][WARN ][transport.netty          ] [huge] Message not fully read (response) for [92] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@63adf08f), error [true], resetting
+[2014-05-04 15:42:19,522][WARN ][transport.netty          ] [huge] Message not fully read (response) for [93] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@31c480e8), error [true], resetting
+[2014-05-04 15:42:19,525][WARN ][transport.netty          ] [huge] Message not fully read (response) for [94] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5beb18de), error [true], resetting
+[2014-05-04 15:42:19,529][WARN ][transport.netty          ] [huge] Message not fully read (response) for [96] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@27adc5f7), error [true], resetting
+[2014-05-04 15:42:19,532][WARN ][transport.netty          ] [huge] Message not fully read (response) for [97] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@19fef7b), error [true], resetting
+[2014-05-04 15:42:19,648][WARN ][transport.netty          ] [huge] Message not fully read (response) for [100] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6e11e9eb), error [true], resetting
+[2014-05-04 15:42:19,652][WARN ][transport.netty          ] [huge] Message not fully read (response) for [101] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5a147bc1), error [true], resetting
+[2014-05-04 15:42:19,656][WARN ][transport.netty          ] [huge] Message not fully read (response) for [102] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@76c8ea1a), error [true], resetting
+[2014-05-04 15:42:19,660][WARN ][transport.netty          ] [huge] Message not fully read (response) for [103] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@818de3), error [true], resetting
+[2014-05-04 15:42:19,664][WARN ][transport.netty          ] [huge] Message not fully read (response) for [104] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7abb0257), error [true], resetting
+[2014-05-04 15:42:19,667][WARN ][transport.netty          ] [huge] Message not fully read (response) for [105] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f016505), error [true], resetting
+[2014-05-04 15:42:19,671][WARN ][transport.netty          ] [huge] Message not fully read (response) for [106] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@257db177), error [true], resetting
+[2014-05-04 15:42:19,675][WARN ][transport.netty          ] [huge] Message not fully read (response) for [107] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@13f17c9e), error [true], resetting
+[2014-05-04 15:42:19,676][WARN ][transport.netty          ] [huge] Message not fully read (response) for [108] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@532c734c), error [true], resetting
+[2014-05-04 15:42:19,679][WARN ][transport.netty          ] [huge] Message not fully read (response) for [109] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b45ad3d), error [true], resetting
+[2014-05-04 15:42:19,680][WARN ][transport.netty          ] [huge] Message not fully read (response) for [110] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b708593), error [true], resetting
+[2014-05-04 15:42:19,683][WARN ][transport.netty          ] [huge] Message not fully read (response) for [111] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@8517bc3), error [true], resetting
+[2014-05-04 15:42:19,684][WARN ][transport.netty          ] [huge] Message not fully read (response) for [112] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1d944379), error [true], resetting
+[2014-05-04 15:42:19,687][WARN ][transport.netty          ] [huge] Message not fully read (response) for [113] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@70d9cc1a), error [true], resetting
+[2014-05-04 15:42:19,696][WARN ][transport.netty          ] [huge] Message not fully read (response) for [118] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3499c4cc), error [true], resetting
+[2014-05-04 15:42:19,696][WARN ][transport.netty          ] [huge] Message not fully read (response) for [117] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1f710374), error [true], resetting
+[2014-05-04 15:42:19,693][WARN ][transport.netty          ] [huge] Message not fully read (response) for [116] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@799ac2e3), error [true], resetting
+[2014-05-04 15:42:19,692][WARN ][transport.netty          ] [huge] Message not fully read (response) for [115] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61db2215), error [true], resetting
+[2014-05-04 15:42:19,688][WARN ][transport.netty          ] [huge] Message not fully read (response) for [114] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6ae6f8d7), error [true], resetting
+[2014-05-04 15:42:19,712][WARN ][transport.netty          ] [huge] Message not fully read (response) for [119] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5b47480e), error [true], resetting
+[2014-05-04 15:42:19,712][WARN ][transport.netty          ] [huge] Message not fully read (response) for [120] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24cbbdf3), error [true], resetting
+[2014-05-04 15:42:19,716][WARN ][transport.netty          ] [huge] Message not fully read (response) for [121] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3c23af64), error [true], resetting
+[2014-05-04 15:42:19,717][WARN ][transport.netty          ] [huge] Message not fully read (response) for [122] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4acfed14), error [true], resetting
+[2014-05-04 15:42:19,720][WARN ][transport.netty          ] [huge] Message not fully read (response) for [123] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@18d5e26b), error [true], resetting
+[2014-05-04 15:42:19,720][WARN ][transport.netty          ] [huge] Message not fully read (response) for [124] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@203eb8a), error [true], resetting
+[2014-05-04 15:42:19,724][WARN ][transport.netty          ] [huge] Message not fully read (response) for [125] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f5cb20e), error [true], resetting
+[2014-05-04 15:42:19,725][WARN ][transport.netty          ] [huge] Message not fully read (response) for [126] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4eadddd6), error [true], resetting
+[2014-05-04 15:42:19,728][WARN ][transport.netty          ] [huge] Message not fully read (response) for [127] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@78bf34f4), error [true], resetting
+[2014-05-04 15:42:19,729][WARN ][transport.netty          ] [huge] Message not fully read (response) for [128] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@512dbd1a), error [true], resetting
+[2014-05-04 15:42:19,732][WARN ][transport.netty          ] [huge] Message not fully read (response) for [129] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@11da1f99), error [true], resetting
+[2014-05-04 15:42:19,741][WARN ][transport.netty          ] [huge] Message not fully read (response) for [134] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@37263a93), error [true], resetting
+[2014-05-04 15:42:19,740][WARN ][transport.netty          ] [huge] Message not fully read (response) for [133] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@30a1718e), error [true], resetting
+[2014-05-04 15:42:19,736][WARN ][transport.netty          ] [huge] Message not fully read (response) for [132] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@32fbca58), error [true], resetting
+[2014-05-04 15:42:19,736][WARN ][transport.netty          ] [huge] Message not fully read (response) for [131] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@35bf8de1), error [true], resetting
+[2014-05-04 15:42:19,732][WARN ][transport.netty          ] [huge] Message not fully read (response) for [130] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7507ef7), error [true], resetting
+[2014-05-04 15:42:19,747][WARN ][transport.netty          ] [huge] Message not fully read (response) for [135] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2ecfa52e), error [true], resetting
+[2014-05-04 15:42:19,748][WARN ][transport.netty          ] [huge] Message not fully read (response) for [136] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@42658704), error [true], resetting
+[2014-05-04 15:42:19,751][WARN ][transport.netty          ] [huge] Message not fully read (response) for [137] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@178339aa), error [true], resetting
+[2014-05-04 15:42:19,752][WARN ][transport.netty          ] [huge] Message not fully read (response) for [138] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@283ed3f5), error [true], resetting
+[2014-05-04 15:42:19,755][WARN ][transport.netty          ] [huge] Message not fully read (response) for [139] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@34cd8e77), error [true], resetting
+[2014-05-04 15:42:19,756][WARN ][transport.netty          ] [huge] Message not fully read (response) for [140] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@234441b6), error [true], resetting
+[2014-05-04 15:42:19,954][WARN ][transport.netty          ] [huge] Message not fully read (response) for [145] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1d1c0f9c), error [true], resetting
+[2014-05-04 15:42:19,958][WARN ][transport.netty          ] [huge] Message not fully read (response) for [146] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1d44d9b2), error [true], resetting
+[2014-05-04 15:42:19,961][WARN ][transport.netty          ] [huge] Message not fully read (response) for [147] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@13304421), error [true], resetting
+[2014-05-04 15:42:19,965][WARN ][transport.netty          ] [huge] Message not fully read (response) for [148] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@45c8dc5e), error [true], resetting
+[2014-05-04 15:42:19,969][WARN ][transport.netty          ] [huge] Message not fully read (response) for [149] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5fbc31d), error [true], resetting
+[2014-05-04 15:42:19,979][WARN ][transport.netty          ] [huge] Message not fully read (response) for [152] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@17c047f0), error [true], resetting
+[2014-05-04 15:42:19,976][WARN ][transport.netty          ] [huge] Message not fully read (response) for [151] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@173ebc5c), error [true], resetting
+[2014-05-04 15:42:19,972][WARN ][transport.netty          ] [huge] Message not fully read (response) for [150] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@53c6a7fc), error [true], resetting
+[2014-05-04 15:42:19,983][WARN ][transport.netty          ] [huge] Message not fully read (response) for [153] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@120fe256), error [true], resetting
+[2014-05-04 15:42:19,986][WARN ][transport.netty          ] [huge] Message not fully read (response) for [154] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@50d4855d), error [true], resetting
+[2014-05-04 15:42:19,990][WARN ][transport.netty          ] [huge] Message not fully read (response) for [155] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@307fc620), error [true], resetting
+[2014-05-04 15:42:19,993][WARN ][transport.netty          ] [huge] Message not fully read (response) for [156] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@14a877c0), error [true], resetting
+[2014-05-04 15:42:19,997][WARN ][transport.netty          ] [huge] Message not fully read (response) for [157] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@404de8d8), error [true], resetting
+[2014-05-04 15:42:20,001][WARN ][transport.netty          ] [huge] Message not fully read (response) for [158] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3af1dde3), error [true], resetting
+[2014-05-04 15:42:20,004][WARN ][transport.netty          ] [huge] Message not fully read (response) for [159] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5d1e8050), error [true], resetting
+[2014-05-04 15:42:20,007][WARN ][transport.netty          ] [huge] Message not fully read (response) for [160] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7d7a33f2), error [true], resetting
+[2014-05-04 15:42:20,011][WARN ][transport.netty          ] [huge] Message not fully read (response) for [161] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61e89539), error [true], resetting
+[2014-05-04 15:42:20,025][WARN ][transport.netty          ] [huge] Message not fully read (response) for [165] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@62da1c9f), error [true], resetting
+[2014-05-04 15:42:20,021][WARN ][transport.netty          ] [huge] Message not fully read (response) for [164] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@f5c0729), error [true], resetting
+[2014-05-04 15:42:20,018][WARN ][transport.netty          ] [huge] Message not fully read (response) for [163] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@384a553f), error [true], resetting
+[2014-05-04 15:42:20,014][WARN ][transport.netty          ] [huge] Message not fully read (response) for [162] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6c9d0366), error [true], resetting
+[2014-05-04 15:42:20,029][WARN ][transport.netty          ] [huge] Message not fully read (response) for [166] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5d8d3d6c), error [true], resetting
+[2014-05-04 15:42:20,032][WARN ][transport.netty          ] [huge] Message not fully read (response) for [167] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@63bbad6f), error [true], resetting
+[2014-05-04 15:42:20,036][WARN ][transport.netty          ] [huge] Message not fully read (response) for [168] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@36778590), error [true], resetting
+[2014-05-04 15:42:20,039][WARN ][transport.netty          ] [huge] Message not fully read (response) for [169] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@60e1ccdf), error [true], resetting
+[2014-05-04 15:57:48,274][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1183] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7b04eff0, error [true], resetting
+[2014-05-04 15:58:03,389][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1199] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5ebb2539, error [true], resetting
+[2014-05-04 15:58:04,016][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1201] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5088f1c5, error [true], resetting
+[2014-05-04 15:58:04,609][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1202] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1aee75b7, error [true], resetting
+[2014-05-04 15:58:08,360][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1207] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@656339b2, error [true], resetting
+[2014-05-04 15:58:13,631][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1213] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5561091e, error [true], resetting
+[2014-05-04 15:58:18,422][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1219] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@559dbc5c, error [true], resetting
+[2014-05-04 15:58:23,648][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1225] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@66b967ed, error [true], resetting
+[2014-05-04 15:58:28,436][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1231] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@16562d4b, error [true], resetting
+[2014-05-04 15:58:33,719][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1237] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@73b7a261, error [true], resetting
+[2014-05-04 15:58:38,441][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1243] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1d05c9a1, error [true], resetting
+[2014-05-04 15:58:43,667][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1249] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@66f877e9, error [true], resetting
+[2014-05-04 15:58:48,502][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1255] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5b1ea65f, error [true], resetting
+[2014-05-04 15:58:53,509][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1261] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@393cd5b5, error [true], resetting
+[2014-05-04 15:58:58,518][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1267] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@57202a06, error [true], resetting
+[2014-05-04 15:59:03,524][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1273] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@a71c9a, error [true], resetting
+[2014-05-04 15:59:08,505][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1279] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5b46c2cb, error [true], resetting
+[2014-05-04 15:59:13,537][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1285] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@772fbca, error [true], resetting
+[2014-05-04 15:59:18,667][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1291] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@2c21a44e, error [true], resetting
+[2014-05-04 15:59:23,892][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1297] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@54aa1384, error [true], resetting
+[2014-05-04 15:59:28,558][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1303] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@37fa350b, error [true], resetting
+[2014-05-04 15:59:33,884][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1309] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@bb081e3, error [true], resetting
+[2014-05-04 15:59:38,575][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1315] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@711f6413, error [true], resetting
+[2014-05-04 15:59:43,601][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1321] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@43e3556a, error [true], resetting
+[2014-05-04 15:59:48,593][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1327] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@52620402, error [true], resetting
+[2014-05-04 15:59:53,599][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1333] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@47b05c30, error [true], resetting
+[2014-05-04 15:59:58,615][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1339] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@b747815, error [true], resetting
+[2014-05-04 16:00:03,626][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1345] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@b77b093, error [true], resetting
+[2014-05-04 16:00:08,869][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1351] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5ee988c6, error [true], resetting
+[2014-05-04 16:00:13,655][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1357] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4d6a9a4, error [true], resetting
+[2014-05-04 16:00:18,851][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1363] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@403fc9b6, error [true], resetting
+[2014-05-04 16:00:23,661][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1369] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7657a1c7, error [true], resetting
+[2014-05-04 16:00:29,018][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1375] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@733e4c83, error [true], resetting
+[2014-05-04 16:00:33,738][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1381] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7f116790, error [true], resetting
+[2014-05-04 16:00:38,676][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1387] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@50cd70f7, error [true], resetting
+[2014-05-04 16:00:43,684][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1393] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@61a3954, error [true], resetting
+[2014-05-04 16:00:48,690][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1399] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5cb27de5, error [true], resetting
+[2014-05-04 16:00:53,678][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1405] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@48da7565, error [true], resetting
+[2014-05-04 16:00:58,737][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1411] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1044a38a, error [true], resetting
+[2014-05-04 16:01:03,726][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1417] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@a4cc15e, error [true], resetting
+[2014-05-04 16:01:08,762][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1423] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1c002abb, error [true], resetting
+[2014-05-04 16:01:13,743][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1429] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4ef56959, error [true], resetting
+[2014-05-04 16:01:18,782][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1435] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3b1674f0, error [true], resetting
+[2014-05-04 16:01:23,795][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1441] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@67f42fbb, error [true], resetting
+[2014-05-04 16:01:28,755][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1447] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@53afcf20, error [true], resetting
+[2014-05-04 16:01:33,788][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1453] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3b4768cc, error [true], resetting
+[2014-05-04 16:01:38,858][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1459] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4d31477b, error [true], resetting
+[2014-05-04 16:01:43,845][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1465] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5e4c03d4, error [true], resetting
+[2014-05-04 16:01:49,238][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1472] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@508f83a9, error [true], resetting
+[2014-05-04 16:01:53,817][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1477] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7e0cf590, error [true], resetting
+[2014-05-04 16:01:59,140][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1483] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4ce0197, error [true], resetting
+[2014-05-04 16:02:03,861][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1489] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@70ca62f7, error [true], resetting
+[2014-05-04 16:02:08,848][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1495] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@77277ffa, error [true], resetting
+[2014-05-04 16:02:13,861][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1501] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@42433333, error [true], resetting
+[2014-05-04 16:02:18,913][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1507] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@49d67b41, error [true], resetting
+[2014-05-04 16:02:23,845][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1513] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@20360e46, error [true], resetting
+[2014-05-04 16:02:28,902][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1519] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3ce3262f, error [true], resetting
+[2014-05-04 16:02:33,920][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1525] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@64dff6e3, error [true], resetting
+[2014-05-04 16:02:38,913][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1531] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@53cdad73, error [true], resetting
+[2014-05-04 16:02:43,940][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1537] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@64368400, error [true], resetting
+[2014-05-04 16:02:49,002][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1543] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3a9e9444, error [true], resetting
+[2014-05-04 16:02:53,945][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1549] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@349d963f, error [true], resetting
+[2014-05-04 16:02:58,952][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1555] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@55f31d15, error [true], resetting
+[2014-05-04 16:03:03,980][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1561] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@78847c91, error [true], resetting
+[2014-05-04 16:03:08,994][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1567] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@420e5167, error [true], resetting
+[2014-05-04 16:03:13,988][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1573] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@50987e1e, error [true], resetting
+[2014-05-04 16:03:19,017][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1579] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4b800ce8, error [true], resetting
+[2014-05-04 16:03:24,015][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1585] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@43cf7a11, error [true], resetting
+[2014-05-04 16:03:29,013][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1591] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6a5714de, error [true], resetting
+[2014-05-04 16:03:34,093][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1597] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7b1b315c, error [true], resetting
+[2014-05-04 16:03:39,037][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1603] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3645ce28, error [true], resetting
+[2014-05-04 16:03:44,024][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1609] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@20e1bfee, error [true], resetting
+[2014-05-04 16:03:49,110][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1615] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@44ffb31f, error [true], resetting
+[2014-05-04 16:03:54,045][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1621] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6f48db9c, error [true], resetting
+[2014-05-04 16:03:59,142][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1627] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@184a17d8, error [true], resetting
+[2014-05-04 16:04:04,064][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1633] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@2863725d, error [true], resetting
+[2014-05-04 16:04:09,063][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1639] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@18e94c62, error [true], resetting
+[2014-05-04 16:04:14,115][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1645] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7c95c2b4, error [true], resetting
+[2014-05-04 16:04:19,311][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1652] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4c21f752, error [true], resetting
+[2014-05-04 16:04:24,058][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1657] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@49f44f8a, error [true], resetting
+[2014-05-04 16:04:29,088][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1663] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@469212f4, error [true], resetting
+[2014-05-04 16:04:34,114][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1669] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@290f7ec9, error [true], resetting
+[2014-05-04 16:04:39,147][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1675] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@384cd32e, error [true], resetting
+[2014-05-04 16:04:44,130][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1681] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@376e523d, error [true], resetting
+[2014-05-04 16:04:49,337][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1688] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@2bd93f39, error [true], resetting
+[2014-05-04 16:04:54,135][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1693] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@43c5cdac, error [true], resetting
+[2014-05-04 16:04:59,367][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1700] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6f41f9f6, error [true], resetting
+[2014-05-04 16:05:04,150][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1705] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@5481be8a, error [true], resetting
+[2014-05-04 16:05:09,394][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1712] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@65c94b8f, error [true], resetting
+[2014-05-04 16:05:14,175][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1717] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@27fcd7e, error [true], resetting
+[2014-05-04 16:05:19,408][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1724] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7687281f, error [true], resetting
+[2014-05-04 16:05:24,166][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1729] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@235b4804, error [true], resetting
+[2014-05-04 16:05:29,427][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1736] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3dd510be, error [true], resetting
+[2014-05-04 16:05:34,242][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1741] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6f3e49a8, error [true], resetting
+[2014-05-04 16:05:39,431][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1748] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6255eda6, error [true], resetting
+[2014-05-04 16:05:44,223][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1753] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@25ae306c, error [true], resetting
+[2014-05-04 16:05:49,430][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1760] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4019eb89, error [true], resetting
+[2014-05-04 16:05:54,216][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1765] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@65b6903f, error [true], resetting
+[2014-05-04 16:05:59,417][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1772] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@34b84c44, error [true], resetting
+[2014-05-04 16:06:04,234][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1777] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@2fe83585, error [true], resetting
+[2014-05-04 16:06:09,430][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1784] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3611c755, error [true], resetting
+[2014-05-04 16:06:14,221][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1789] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4935b92e, error [true], resetting
+[2014-05-04 16:06:19,538][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1796] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6610a08e, error [true], resetting
+[2014-05-04 16:06:24,267][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1801] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7e28388b, error [true], resetting
+[2014-05-04 16:06:29,504][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1808] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6576e542, error [true], resetting
+[2014-05-04 16:06:34,316][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1813] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@60c58418, error [true], resetting
+[2014-05-04 16:06:39,322][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1819] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@4763754a, error [true], resetting
+[2014-05-04 16:06:44,334][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1825] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@7274187a, error [true], resetting
+[2014-05-04 16:06:49,316][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1831] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@23f32c4a, error [true], resetting
+[2014-05-04 16:06:54,380][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1837] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@31e0c0b6, error [true], resetting
+[2014-05-04 16:06:59,574][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1844] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1adaf109, error [true], resetting
+[2014-05-04 16:07:04,417][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1849] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@1f421ab0, error [true], resetting
+[2014-05-04 16:07:09,475][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1856] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@2ce628d8, error [true], resetting
+[2014-05-04 16:07:14,412][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1861] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@3a8393ef, error [true], resetting
+[2014-05-04 16:07:19,412][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1867] handler org.elasticsearch.action.support.master.TransportMasterNodeOperationAction$4@6decb6a, error [true], resetting
+[2014-05-04 16:07:23,182][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1876] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5bfa19ca), error [true], resetting
+[2014-05-04 16:07:23,185][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1877] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b34bf3), error [true], resetting
+[2014-05-04 16:07:23,187][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1878] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b3f3ee0), error [true], resetting
+[2014-05-04 16:07:23,190][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1879] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@75392356), error [true], resetting
+[2014-05-04 16:07:23,192][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1880] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7a3f1f39), error [true], resetting
+[2014-05-04 16:07:23,195][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1881] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ea5b721), error [true], resetting
+[2014-05-04 16:07:23,197][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1882] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@456d383a), error [true], resetting
+[2014-05-04 16:07:23,200][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1883] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5c63b660), error [true], resetting
+[2014-05-04 16:07:23,201][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1884] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1197886c), error [true], resetting
+[2014-05-04 16:07:23,203][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1886] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@737d7379), error [true], resetting
+[2014-05-04 16:07:23,204][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1887] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3128482b), error [true], resetting
+[2014-05-04 16:07:23,205][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1888] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4b9a1843), error [true], resetting
+[2014-05-04 16:07:23,206][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1889] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71aefd7b), error [true], resetting
+[2014-05-04 16:07:23,207][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1890] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1783d08c), error [true], resetting
+[2014-05-04 16:07:23,210][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1892] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ef0a363), error [true], resetting
+[2014-05-04 16:07:23,212][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1891] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1876e112), error [true], resetting
+[2014-05-04 16:07:23,212][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1893] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24b2714a), error [true], resetting
+[2014-05-04 16:07:23,214][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1894] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3f2bc418), error [true], resetting
+[2014-05-04 16:07:23,215][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1895] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5257240e), error [true], resetting
+[2014-05-04 16:07:23,217][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1896] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57003d5d), error [true], resetting
+[2014-05-04 16:07:23,217][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1897] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@50bcd14a), error [true], resetting
+[2014-05-04 16:07:23,220][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1898] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1c507aaf), error [true], resetting
+[2014-05-04 16:07:23,225][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1903] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6f262671), error [true], resetting
+[2014-05-04 16:07:23,225][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1902] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5babd8cb), error [true], resetting
+[2014-05-04 16:07:23,223][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1901] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b238fa5), error [true], resetting
+[2014-05-04 16:07:23,222][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1900] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@659297ab), error [true], resetting
+[2014-05-04 16:07:23,220][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1899] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@67a685ae), error [true], resetting
+[2014-05-04 16:07:23,255][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1904] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@31a5fdb9), error [true], resetting
+[2014-05-04 16:07:23,256][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1905] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@8b49626), error [true], resetting
+[2014-05-04 16:07:23,258][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1906] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7ed9d41), error [true], resetting
+[2014-05-04 16:07:23,259][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1907] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@ef1a78), error [true], resetting
+[2014-05-04 16:07:23,261][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1908] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@51b2bcc2), error [true], resetting
+[2014-05-04 16:07:23,261][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1909] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d868e75), error [true], resetting
+[2014-05-04 16:07:23,264][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1910] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5cf2baac), error [true], resetting
+[2014-05-04 16:07:23,264][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1911] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@43bda1e0), error [true], resetting
+[2014-05-04 16:07:23,267][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1913] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@56ce9bde), error [true], resetting
+[2014-05-04 16:07:23,267][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1912] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@165b3858), error [true], resetting
+[2014-05-04 16:07:23,270][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1915] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3ed024df), error [true], resetting
+[2014-05-04 16:07:23,270][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1914] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5324ccb0), error [true], resetting
+[2014-05-04 16:07:23,272][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1916] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@14fa6175), error [true], resetting
+[2014-05-04 16:07:23,273][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1917] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@42145315), error [true], resetting
+[2014-05-04 16:07:23,274][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1918] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@445aa997), error [true], resetting
+[2014-05-04 16:07:23,275][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1919] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1c341b90), error [true], resetting
+[2014-05-04 16:07:23,277][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1920] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@20fd9967), error [true], resetting
+[2014-05-04 16:07:23,278][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1921] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@69624a1c), error [true], resetting
+[2014-05-04 16:07:23,280][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1922] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@33efaa51), error [true], resetting
+[2014-05-04 16:07:23,281][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1923] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3b96c67a), error [true], resetting
+[2014-05-04 16:07:23,282][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1924] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@27c09226), error [true], resetting
+[2014-05-04 16:07:23,294][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1929] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7d5e90cb), error [true], resetting
+[2014-05-04 16:07:23,293][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1928] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@296e2194), error [true], resetting
+[2014-05-04 16:07:23,286][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1927] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6ba0e2d1), error [true], resetting
+[2014-05-04 16:07:23,285][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1926] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1e64cc4d), error [true], resetting
+[2014-05-04 16:07:23,283][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1925] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@53bb112d), error [true], resetting
+[2014-05-04 16:07:23,305][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1930] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4b743fba), error [true], resetting
+[2014-05-04 16:07:23,305][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1931] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3d03f309), error [true], resetting
+[2014-05-04 16:07:23,307][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1932] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4e48f32a), error [true], resetting
+[2014-05-04 16:07:23,308][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1933] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1754728d), error [true], resetting
+[2014-05-04 16:07:23,309][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1934] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@292c92f2), error [true], resetting
+[2014-05-04 16:07:23,310][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1935] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d6362fc), error [true], resetting
+[2014-05-04 16:07:23,312][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1936] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57f7a5ab), error [true], resetting
+[2014-05-04 16:07:23,312][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1937] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@439daaab), error [true], resetting
+[2014-05-04 16:07:23,314][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1938] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@242fe33b), error [true], resetting
+[2014-05-04 16:07:23,314][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1939] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@43ef490c), error [true], resetting
+[2014-05-04 16:07:23,327][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1941] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6ca79a6a), error [true], resetting
+[2014-05-04 16:07:23,327][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1940] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6f8adce0), error [true], resetting
+[2014-05-04 16:07:23,330][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1943] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1183eeb0), error [true], resetting
+[2014-05-04 16:07:23,330][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1942] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6cab6dcb), error [true], resetting
+[2014-05-04 16:07:23,333][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1944] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6ab56229), error [true], resetting
+[2014-05-04 16:07:23,333][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1945] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2a3fa87a), error [true], resetting
+[2014-05-04 16:07:23,335][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1946] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@394df741), error [true], resetting
+[2014-05-04 16:07:23,336][WARN ][transport.netty          ] [huge] Message not fully read (response) for [1947] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2da3e9cb), error [true], resetting
+[2014-05-04 16:27:44,897][DEBUG][action.index             ] [huge] [da8a5324][2], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][mKYgpk9cRLq2MDOX0bLdHQ], source[{"@timestamp":"2014-05-04T16:27:44","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r\n","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:30:34,527][DEBUG][action.index             ] [huge] [da8a5324][4], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][y0D6NSsVT8iJW7xTzpY8qQ], source[{"@timestamp":"2014-05-04T16:30:34","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r\n","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:31:45,777][DEBUG][action.index             ] [huge] [da8a5324][2], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][yJvAA-C_TbefYfmvDt-vcg], source[{"@timestamp":"2014-05-04T16:31:45","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:32:15,045][DEBUG][action.index             ] [huge] [da8a5324][2], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][6Q9frd7MQiiuaRHsyJZYoA], source[{"@timestamp":"2014-05-04T16:32:14","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:34:48,389][DEBUG][action.index             ] [huge] [da8a5324][2], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][5D9PSzO4QSuOj1oJ22wExw], source[{"@timestamp":"2014-05-04T16:34:48","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:36:40,708][WARN ][transport.netty          ] [huge] Message not fully read (response) for [29294] handler org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$2@67aff9e8, error [true], resetting
+[2014-05-04 16:37:04,560][WARN ][transport.netty          ] [huge] Message not fully read (response) for [29630] handler org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$2@59a1da00, error [true], resetting
+[2014-05-04 16:38:12,940][WARN ][transport.netty          ] [huge] Message not fully read (response) for [30723] handler org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$2@bec57d6, error [true], resetting
+[2014-05-04 16:43:36,085][DEBUG][action.index             ] [huge] [da8a5324][2], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][3_n9iLM0ROGQj_PwnmjUMQ], source[{"@timestamp":"2014-05-04T16:43:35","indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","port":"9200","device":"da8a5324","temperature":"33\r","host":"vdev06-lnx"}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [temperature]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "33
+"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 16:47:02,469][WARN ][transport.netty          ] [huge] Message not fully read (response) for [39042] handler org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$2@3a2b6ce6, error [true], resetting
+[2014-05-04 19:49:42,787][WARN ][transport.netty          ] [huge] Message not fully read (response) for [127047] handler org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$2@5d91fa4, error [true], resetting
+[2014-05-04 19:51:29,863][DEBUG][action.index             ] [huge] [da8a5324][4], node[wEUsvQZlTeyo8T3o-4Jfvg], [P], s[STARTED]: Failed to execute [index {[da8a5324][vdev06-lnx][odO6GpCfSwKopJPxYOazQA], source[{"cpu_idle":3,"cpu_max_frequency":2265600,"cpu_frequency":300000,"battery_voltage":4134,"battery_temp_unit":"C","temperature":34,"indexing":"vdev06-lnx:9200/da8a5324/vdev06-lnx","@timestamp":"2014-05-04T19:51:28","cpu":-2,"temperature_unit":"C","battery_level":1,"cpu_min_frequency":300000,"device":"da8a5324","port":"9200","host":"vdev06-lnx","cpu_usage":"1.7","battery_temp":247,"cpu_frequency_unit":"Hz","cpu_active":1}]}]
+org.elasticsearch.index.mapper.MapperParsingException: failed to parse [cpu_usage]
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:418)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.serializeValue(ObjectMapper.java:616)
+	at org.elasticsearch.index.mapper.object.ObjectMapper.parse(ObjectMapper.java:469)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:515)
+	at org.elasticsearch.index.mapper.DocumentMapper.parse(DocumentMapper.java:462)
+	at org.elasticsearch.index.shard.service.InternalIndexShard.prepareCreate(InternalIndexShard.java:363)
+	at org.elasticsearch.action.index.TransportIndexAction.shardOperationOnPrimary(TransportIndexAction.java:215)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction.performOnPrimary(TransportShardReplicationOperationAction.java:556)
+	at org.elasticsearch.action.support.replication.TransportShardReplicationOperationAction$AsyncShardOperationAction$1.run(TransportShardReplicationOperationAction.java:426)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1110)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:603)
+	at java.lang.Thread.run(Thread.java:636)
+Caused by: java.lang.NumberFormatException: For input string: "1.7"
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Long.parseLong(Long.java:438)
+	at java.lang.Long.parseLong(Long.java:478)
+	at org.elasticsearch.common.xcontent.support.AbstractXContentParser.longValue(AbstractXContentParser.java:145)
+	at org.elasticsearch.index.mapper.core.LongFieldMapper.innerParseCreateField(LongFieldMapper.java:297)
+	at org.elasticsearch.index.mapper.core.NumberFieldMapper.parseCreateField(NumberFieldMapper.java:215)
+	at org.elasticsearch.index.mapper.core.AbstractFieldMapper.parse(AbstractFieldMapper.java:408)
+	... 11 more
+[2014-05-04 22:16:49,967][INFO ][node                     ] [huge] stopping ...
+[2014-05-04 22:16:50,035][INFO ][node                     ] [huge] stopped
+[2014-05-04 22:16:50,035][INFO ][node                     ] [huge] closing ...
+[2014-05-04 22:16:50,039][INFO ][node                     ] [huge] closed
+[2014-05-04 22:17:14,001][INFO ][node                     ] [huge] version[1.1.1], pid[22262], build[f1585f0/2014-04-16T14:27:12Z]
+[2014-05-04 22:17:14,001][INFO ][node                     ] [huge] initializing ...
+[2014-05-04 22:17:14,017][INFO ][plugins                  ] [huge] loaded [], sites [head, bigdesk]
+[2014-05-04 22:17:16,263][INFO ][node                     ] [huge] initialized
+[2014-05-04 22:17:16,264][INFO ][node                     ] [huge] starting ...
+[2014-05-04 22:17:16,337][INFO ][transport                ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9300]}, publish_address {inet[/10.226.62.47:9300]}
+[2014-05-04 22:17:25,416][INFO ][cluster.service          ] [huge] detected_master [gigantic][dx3CTFJMQ-CVaos7hIhuAg][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true}, added {[gigantic][dx3CTFJMQ-CVaos7hIhuAg][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true},}, reason: zen-disco-receive(from master [[gigantic][dx3CTFJMQ-CVaos7hIhuAg][vishruts-lnx][inet[/10.226.60.67:9300]]{master=true}])
+[2014-05-04 22:17:25,431][INFO ][discovery                ] [huge] devMon/bCzdLQhLSHmpVR25QYKDYQ
+[2014-05-04 22:17:25,438][INFO ][http                     ] [huge] bound_address {inet[/0:0:0:0:0:0:0:0:9200]}, publish_address {inet[/10.226.62.47:9200]}
+[2014-05-04 22:17:25,440][INFO ][node                     ] [huge] started
+[2014-05-04 22:17:33,997][WARN ][transport.netty          ] [huge] Message not fully read (response) for [164] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6f3974ba), error [true], resetting
+[2014-05-04 22:17:34,174][WARN ][transport.netty          ] [huge] Message not fully read (response) for [170] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@32e6e42e), error [true], resetting
+[2014-05-04 22:17:34,178][WARN ][transport.netty          ] [huge] Message not fully read (response) for [171] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4a5e88f7), error [true], resetting
+[2014-05-04 22:17:34,181][WARN ][transport.netty          ] [huge] Message not fully read (response) for [172] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4723646), error [true], resetting
+[2014-05-04 22:17:34,185][WARN ][transport.netty          ] [huge] Message not fully read (response) for [173] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@66492ff1), error [true], resetting
+[2014-05-04 22:17:34,204][WARN ][transport.netty          ] [huge] Message not fully read (response) for [178] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d523d40), error [true], resetting
+[2014-05-04 22:17:34,200][WARN ][transport.netty          ] [huge] Message not fully read (response) for [177] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@dd0099), error [true], resetting
+[2014-05-04 22:17:34,197][WARN ][transport.netty          ] [huge] Message not fully read (response) for [176] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4e0c2b07), error [true], resetting
+[2014-05-04 22:17:34,193][WARN ][transport.netty          ] [huge] Message not fully read (response) for [175] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2a0f3b83), error [true], resetting
+[2014-05-04 22:17:34,189][WARN ][transport.netty          ] [huge] Message not fully read (response) for [174] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@10ad1355), error [true], resetting
+[2014-05-04 22:17:34,219][WARN ][transport.netty          ] [huge] Message not fully read (response) for [179] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@69d4c4b7), error [true], resetting
+[2014-05-04 22:17:34,223][WARN ][transport.netty          ] [huge] Message not fully read (response) for [180] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@44c45f52), error [true], resetting
+[2014-05-04 22:17:34,226][WARN ][transport.netty          ] [huge] Message not fully read (response) for [181] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@384e23c3), error [true], resetting
+[2014-05-04 22:17:34,230][WARN ][transport.netty          ] [huge] Message not fully read (response) for [182] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@120df416), error [true], resetting
+[2014-05-04 22:17:34,350][WARN ][transport.netty          ] [huge] Message not fully read (response) for [184] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@591f5ff9), error [true], resetting
+[2014-05-04 22:17:34,355][WARN ][transport.netty          ] [huge] Message not fully read (response) for [185] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@11ba3c1f), error [true], resetting
+[2014-05-04 22:17:34,358][WARN ][transport.netty          ] [huge] Message not fully read (response) for [186] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@59c12050), error [true], resetting
+[2014-05-04 22:17:34,361][WARN ][transport.netty          ] [huge] Message not fully read (response) for [187] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@16309239), error [true], resetting
+[2014-05-04 22:17:34,365][WARN ][transport.netty          ] [huge] Message not fully read (response) for [188] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ecfe790), error [true], resetting
+[2014-05-04 22:17:34,370][WARN ][transport.netty          ] [huge] Message not fully read (response) for [189] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@336bc75c), error [true], resetting
+[2014-05-04 22:17:34,373][WARN ][transport.netty          ] [huge] Message not fully read (response) for [190] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@68ed8363), error [true], resetting
+[2014-05-04 22:17:34,378][WARN ][transport.netty          ] [huge] Message not fully read (response) for [191] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@414d0e66), error [true], resetting
+[2014-05-04 22:17:34,382][WARN ][transport.netty          ] [huge] Message not fully read (response) for [192] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@60a896b8), error [true], resetting
+[2014-05-04 22:17:34,386][WARN ][transport.netty          ] [huge] Message not fully read (response) for [193] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6112c9f), error [true], resetting
+[2014-05-04 22:17:34,397][WARN ][transport.netty          ] [huge] Message not fully read (response) for [196] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@38c83cfd), error [true], resetting
+[2014-05-04 22:17:34,393][WARN ][transport.netty          ] [huge] Message not fully read (response) for [195] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57fd54c4), error [true], resetting
+[2014-05-04 22:17:34,389][WARN ][transport.netty          ] [huge] Message not fully read (response) for [194] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@51887dd5), error [true], resetting
+[2014-05-04 22:17:34,401][WARN ][transport.netty          ] [huge] Message not fully read (response) for [197] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3ea1e9b0), error [true], resetting
+[2014-05-04 22:17:34,405][WARN ][transport.netty          ] [huge] Message not fully read (response) for [198] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5b9f1bac), error [true], resetting
+[2014-05-04 22:17:34,409][WARN ][transport.netty          ] [huge] Message not fully read (response) for [199] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@264430e2), error [true], resetting
+[2014-05-04 22:17:34,412][WARN ][transport.netty          ] [huge] Message not fully read (response) for [200] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7556cd93), error [true], resetting
+[2014-05-04 22:17:34,584][WARN ][transport.netty          ] [huge] Message not fully read (response) for [205] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b98a1f4), error [true], resetting
+[2014-05-04 22:17:34,588][WARN ][transport.netty          ] [huge] Message not fully read (response) for [206] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61b0d990), error [true], resetting
+[2014-05-04 22:17:34,592][WARN ][transport.netty          ] [huge] Message not fully read (response) for [207] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@219baf0b), error [true], resetting
+[2014-05-04 22:17:34,597][WARN ][transport.netty          ] [huge] Message not fully read (response) for [208] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@48262730), error [true], resetting
+[2014-05-04 22:17:34,601][WARN ][transport.netty          ] [huge] Message not fully read (response) for [209] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ca7d316), error [true], resetting
+[2014-05-04 22:17:34,605][WARN ][transport.netty          ] [huge] Message not fully read (response) for [210] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1e1370ab), error [true], resetting
+[2014-05-04 22:17:34,606][WARN ][transport.netty          ] [huge] Message not fully read (response) for [211] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@e49f9fa), error [true], resetting
+[2014-05-04 22:17:34,609][WARN ][transport.netty          ] [huge] Message not fully read (response) for [212] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1aba936a), error [true], resetting
+[2014-05-04 22:17:34,611][WARN ][transport.netty          ] [huge] Message not fully read (response) for [213] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f2421db), error [true], resetting
+[2014-05-04 22:17:34,613][WARN ][transport.netty          ] [huge] Message not fully read (response) for [214] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4d2ad974), error [true], resetting
+[2014-05-04 22:17:34,615][WARN ][transport.netty          ] [huge] Message not fully read (response) for [215] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@382a7640), error [true], resetting
+[2014-05-04 22:17:34,617][WARN ][transport.netty          ] [huge] Message not fully read (response) for [216] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6bb9808e), error [true], resetting
+[2014-05-04 22:17:34,619][WARN ][transport.netty          ] [huge] Message not fully read (response) for [217] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5fa721e2), error [true], resetting
+[2014-05-04 22:17:34,621][WARN ][transport.netty          ] [huge] Message not fully read (response) for [218] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@55a1ad7d), error [true], resetting
+[2014-05-04 22:17:34,622][WARN ][transport.netty          ] [huge] Message not fully read (response) for [219] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@69851576), error [true], resetting
+[2014-05-04 22:17:34,633][WARN ][transport.netty          ] [huge] Message not fully read (response) for [224] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@63b9ef8c), error [true], resetting
+[2014-05-04 22:17:34,630][WARN ][transport.netty          ] [huge] Message not fully read (response) for [223] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@25aa9b4d), error [true], resetting
+[2014-05-04 22:17:34,629][WARN ][transport.netty          ] [huge] Message not fully read (response) for [222] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@434fb3e1), error [true], resetting
+[2014-05-04 22:17:34,626][WARN ][transport.netty          ] [huge] Message not fully read (response) for [221] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5bab2ddb), error [true], resetting
+[2014-05-04 22:17:34,625][WARN ][transport.netty          ] [huge] Message not fully read (response) for [220] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@20442c19), error [true], resetting
+[2014-05-04 22:17:34,645][WARN ][transport.netty          ] [huge] Message not fully read (response) for [225] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@441e037a), error [true], resetting
+[2014-05-04 22:17:34,646][WARN ][transport.netty          ] [huge] Message not fully read (response) for [226] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@e766186), error [true], resetting
+[2014-05-04 22:17:34,650][WARN ][transport.netty          ] [huge] Message not fully read (response) for [228] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7dfcabd4), error [true], resetting
+[2014-05-04 22:17:34,650][WARN ][transport.netty          ] [huge] Message not fully read (response) for [227] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57752bea), error [true], resetting
+[2014-05-04 22:17:34,654][WARN ][transport.netty          ] [huge] Message not fully read (response) for [230] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4d963c81), error [true], resetting
+[2014-05-04 22:17:34,655][WARN ][transport.netty          ] [huge] Message not fully read (response) for [229] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@425e60f2), error [true], resetting
+[2014-05-04 22:17:34,658][WARN ][transport.netty          ] [huge] Message not fully read (response) for [231] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@422ed1e8), error [true], resetting
+[2014-05-04 22:17:34,659][WARN ][transport.netty          ] [huge] Message not fully read (response) for [232] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@fd6f84a), error [true], resetting
+[2014-05-04 22:17:34,662][WARN ][transport.netty          ] [huge] Message not fully read (response) for [233] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6a46ca65), error [true], resetting
+[2014-05-04 22:17:34,663][WARN ][transport.netty          ] [huge] Message not fully read (response) for [234] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4d91e365), error [true], resetting
+[2014-05-04 22:17:34,667][WARN ][transport.netty          ] [huge] Message not fully read (response) for [235] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24e823ac), error [true], resetting
+[2014-05-04 22:17:34,667][WARN ][transport.netty          ] [huge] Message not fully read (response) for [236] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@47e0422), error [true], resetting
+[2014-05-04 22:17:34,671][WARN ][transport.netty          ] [huge] Message not fully read (response) for [237] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6d41567b), error [true], resetting
+[2014-05-04 22:17:34,671][WARN ][transport.netty          ] [huge] Message not fully read (response) for [238] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5c94dd46), error [true], resetting
+[2014-05-04 22:17:34,674][WARN ][transport.netty          ] [huge] Message not fully read (response) for [239] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@314b4e26), error [true], resetting
+[2014-05-04 22:17:34,675][WARN ][transport.netty          ] [huge] Message not fully read (response) for [240] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@46f7ba12), error [true], resetting
+[2014-05-04 22:17:34,685][WARN ][transport.netty          ] [huge] Message not fully read (response) for [245] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2b108691), error [true], resetting
+[2014-05-04 22:17:34,682][WARN ][transport.netty          ] [huge] Message not fully read (response) for [244] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4a40050), error [true], resetting
+[2014-05-04 22:17:34,681][WARN ][transport.netty          ] [huge] Message not fully read (response) for [243] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@117e72d1), error [true], resetting
+[2014-05-04 22:17:34,678][WARN ][transport.netty          ] [huge] Message not fully read (response) for [242] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@23bffd0d), error [true], resetting
+[2014-05-04 22:17:34,678][WARN ][transport.netty          ] [huge] Message not fully read (response) for [241] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@31d91824), error [true], resetting
+[2014-05-04 22:17:34,702][WARN ][transport.netty          ] [huge] Message not fully read (response) for [246] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@49f2afad), error [true], resetting
+[2014-05-04 22:17:34,702][WARN ][transport.netty          ] [huge] Message not fully read (response) for [247] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5bebacc8), error [true], resetting
+[2014-05-04 22:17:34,706][WARN ][transport.netty          ] [huge] Message not fully read (response) for [248] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4d9cad9d), error [true], resetting
+[2014-05-04 22:17:34,706][WARN ][transport.netty          ] [huge] Message not fully read (response) for [249] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@694a4639), error [true], resetting
+[2014-05-04 22:17:34,709][WARN ][transport.netty          ] [huge] Message not fully read (response) for [250] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b487e30), error [true], resetting
+[2014-05-04 22:17:34,710][WARN ][transport.netty          ] [huge] Message not fully read (response) for [251] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@44548719), error [true], resetting
+[2014-05-04 22:17:34,924][WARN ][transport.netty          ] [huge] Message not fully read (response) for [256] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@73e0e19d), error [true], resetting
+[2014-05-04 22:17:34,927][WARN ][transport.netty          ] [huge] Message not fully read (response) for [257] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@30fc45da), error [true], resetting
+[2014-05-04 22:17:34,932][WARN ][transport.netty          ] [huge] Message not fully read (response) for [258] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24e0456), error [true], resetting
+[2014-05-04 22:17:34,936][WARN ][transport.netty          ] [huge] Message not fully read (response) for [259] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@52ef57f8), error [true], resetting
+[2014-05-04 22:17:34,940][WARN ][transport.netty          ] [huge] Message not fully read (response) for [260] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5ffe40d5), error [true], resetting
+[2014-05-04 22:17:34,945][WARN ][transport.netty          ] [huge] Message not fully read (response) for [261] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2f5e8a8f), error [true], resetting
+[2014-05-04 22:17:34,945][WARN ][transport.netty          ] [huge] Message not fully read (response) for [262] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@67daca94), error [true], resetting
+[2014-05-04 22:17:34,949][WARN ][transport.netty          ] [huge] Message not fully read (response) for [263] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4d29efd0), error [true], resetting
+[2014-05-04 22:17:34,949][WARN ][transport.netty          ] [huge] Message not fully read (response) for [264] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7c3f6843), error [true], resetting
+[2014-05-04 22:17:34,952][WARN ][transport.netty          ] [huge] Message not fully read (response) for [265] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@26d6466f), error [true], resetting
+[2014-05-04 22:17:34,953][WARN ][transport.netty          ] [huge] Message not fully read (response) for [266] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3daa3554), error [true], resetting
+[2014-05-04 22:17:34,956][WARN ][transport.netty          ] [huge] Message not fully read (response) for [267] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71933d6c), error [true], resetting
+[2014-05-04 22:17:34,957][WARN ][transport.netty          ] [huge] Message not fully read (response) for [268] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@79a5b7b4), error [true], resetting
+[2014-05-04 22:17:34,960][WARN ][transport.netty          ] [huge] Message not fully read (response) for [269] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6ebfc8d0), error [true], resetting
+[2014-05-04 22:17:34,969][WARN ][transport.netty          ] [huge] Message not fully read (response) for [274] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@63f5e4b6), error [true], resetting
+[2014-05-04 22:17:34,969][WARN ][transport.netty          ] [huge] Message not fully read (response) for [273] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@40c19080), error [true], resetting
+[2014-05-04 22:17:34,965][WARN ][transport.netty          ] [huge] Message not fully read (response) for [272] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1bdbbaab), error [true], resetting
+[2014-05-04 22:17:34,964][WARN ][transport.netty          ] [huge] Message not fully read (response) for [271] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@227c808d), error [true], resetting
+[2014-05-04 22:17:34,961][WARN ][transport.netty          ] [huge] Message not fully read (response) for [270] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7119087d), error [true], resetting
+[2014-05-04 22:17:34,984][WARN ][transport.netty          ] [huge] Message not fully read (response) for [275] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@247a9bff), error [true], resetting
+[2014-05-04 22:17:34,984][WARN ][transport.netty          ] [huge] Message not fully read (response) for [276] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6d97950e), error [true], resetting
+[2014-05-04 22:17:34,988][WARN ][transport.netty          ] [huge] Message not fully read (response) for [277] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7abb0257), error [true], resetting
+[2014-05-04 22:17:34,988][WARN ][transport.netty          ] [huge] Message not fully read (response) for [278] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b96dcb4), error [true], resetting
+[2014-05-04 22:17:34,991][WARN ][transport.netty          ] [huge] Message not fully read (response) for [279] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5d73b35d), error [true], resetting
+[2014-05-04 22:17:34,992][WARN ][transport.netty          ] [huge] Message not fully read (response) for [280] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5704ce99), error [true], resetting
+[2014-05-04 22:17:34,995][WARN ][transport.netty          ] [huge] Message not fully read (response) for [281] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7c97cb70), error [true], resetting
+[2014-05-04 22:17:34,996][WARN ][transport.netty          ] [huge] Message not fully read (response) for [282] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@51ad65f7), error [true], resetting
+[2014-05-04 22:17:34,999][WARN ][transport.netty          ] [huge] Message not fully read (response) for [283] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f016505), error [true], resetting
+[2014-05-04 22:17:34,999][WARN ][transport.netty          ] [huge] Message not fully read (response) for [284] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7dc5a30b), error [true], resetting
+[2014-05-04 22:17:35,004][WARN ][transport.netty          ] [huge] Message not fully read (response) for [285] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3a5367af), error [true], resetting
+[2014-05-04 22:17:35,004][WARN ][transport.netty          ] [huge] Message not fully read (response) for [286] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@39bc3013), error [true], resetting
+[2014-05-04 22:17:35,007][WARN ][transport.netty          ] [huge] Message not fully read (response) for [288] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71f84d01), error [true], resetting
+[2014-05-04 22:17:35,008][WARN ][transport.netty          ] [huge] Message not fully read (response) for [287] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6487b71b), error [true], resetting
+[2014-05-04 22:17:35,011][WARN ][transport.netty          ] [huge] Message not fully read (response) for [289] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@a06812d), error [true], resetting
+[2014-05-04 22:17:35,020][WARN ][transport.netty          ] [huge] Message not fully read (response) for [294] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@70991d56), error [true], resetting
+[2014-05-04 22:17:35,020][WARN ][transport.netty          ] [huge] Message not fully read (response) for [293] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7e896e10), error [true], resetting
+[2014-05-04 22:17:35,016][WARN ][transport.netty          ] [huge] Message not fully read (response) for [292] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1d0bfedd), error [true], resetting
+[2014-05-04 22:17:35,016][WARN ][transport.netty          ] [huge] Message not fully read (response) for [291] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@36536500), error [true], resetting
+[2014-05-04 22:17:35,012][WARN ][transport.netty          ] [huge] Message not fully read (response) for [290] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@310ab67f), error [true], resetting
+[2014-05-04 22:17:35,029][WARN ][transport.netty          ] [huge] Message not fully read (response) for [295] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@545532da), error [true], resetting
+[2014-05-04 22:17:35,030][WARN ][transport.netty          ] [huge] Message not fully read (response) for [296] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@257db177), error [true], resetting
+[2014-05-04 22:17:35,032][WARN ][transport.netty          ] [huge] Message not fully read (response) for [297] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5f0e0edb), error [true], resetting
+[2014-05-04 22:17:35,034][WARN ][transport.netty          ] [huge] Message not fully read (response) for [298] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@13f17c9e), error [true], resetting
+[2014-05-04 22:17:35,036][WARN ][transport.netty          ] [huge] Message not fully read (response) for [299] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@532c734c), error [true], resetting
+[2014-05-04 22:17:35,038][WARN ][transport.netty          ] [huge] Message not fully read (response) for [300] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b45ad3d), error [true], resetting
+[2014-05-04 22:17:35,040][WARN ][transport.netty          ] [huge] Message not fully read (response) for [301] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b708593), error [true], resetting
+[2014-05-04 22:17:35,327][WARN ][transport.netty          ] [huge] Message not fully read (response) for [305] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71a1644b), error [true], resetting
+[2014-05-04 22:17:35,330][WARN ][transport.netty          ] [huge] Message not fully read (response) for [306] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1b6915d4), error [true], resetting
+[2014-05-04 22:17:35,334][WARN ][transport.netty          ] [huge] Message not fully read (response) for [307] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@46d8dc2e), error [true], resetting
+[2014-05-04 22:17:35,338][WARN ][transport.netty          ] [huge] Message not fully read (response) for [308] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@16971e9d), error [true], resetting
+[2014-05-04 22:17:35,341][WARN ][transport.netty          ] [huge] Message not fully read (response) for [309] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3ec1e10c), error [true], resetting
+[2014-05-04 22:17:35,345][WARN ][transport.netty          ] [huge] Message not fully read (response) for [310] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2a9dfb04), error [true], resetting
+[2014-05-04 22:17:35,358][WARN ][transport.netty          ] [huge] Message not fully read (response) for [315] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5b0f3bd7), error [true], resetting
+[2014-05-04 22:17:35,355][WARN ][transport.netty          ] [huge] Message not fully read (response) for [314] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@54a01a10), error [true], resetting
+[2014-05-04 22:17:35,351][WARN ][transport.netty          ] [huge] Message not fully read (response) for [313] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@48b49e4), error [true], resetting
+[2014-05-04 22:17:35,348][WARN ][transport.netty          ] [huge] Message not fully read (response) for [312] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@69cad977), error [true], resetting
+[2014-05-04 22:17:35,367][WARN ][transport.netty          ] [huge] Message not fully read (response) for [316] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4521cef5), error [true], resetting
+[2014-05-04 22:17:35,370][WARN ][transport.netty          ] [huge] Message not fully read (response) for [317] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2e9a5a48), error [true], resetting
+[2014-05-04 22:17:35,374][WARN ][transport.netty          ] [huge] Message not fully read (response) for [318] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@179d44df), error [true], resetting
+[2014-05-04 22:17:35,377][WARN ][transport.netty          ] [huge] Message not fully read (response) for [319] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@56149895), error [true], resetting
+[2014-05-04 22:17:35,496][WARN ][transport.netty          ] [huge] Message not fully read (response) for [322] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@376433e4), error [true], resetting
+[2014-05-04 22:17:35,499][WARN ][transport.netty          ] [huge] Message not fully read (response) for [323] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@138ada25), error [true], resetting
+[2014-05-04 22:17:35,502][WARN ][transport.netty          ] [huge] Message not fully read (response) for [324] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@f7bd29), error [true], resetting
+[2014-05-04 22:17:35,505][WARN ][transport.netty          ] [huge] Message not fully read (response) for [325] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@8a3cf3e), error [true], resetting
+[2014-05-04 22:17:35,509][WARN ][transport.netty          ] [huge] Message not fully read (response) for [326] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3a7af3e0), error [true], resetting
+[2014-05-04 22:17:35,512][WARN ][transport.netty          ] [huge] Message not fully read (response) for [327] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5e21151e), error [true], resetting
+[2014-05-04 22:17:35,516][WARN ][transport.netty          ] [huge] Message not fully read (response) for [328] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4df194d9), error [true], resetting
+[2014-05-04 22:17:35,519][WARN ][transport.netty          ] [huge] Message not fully read (response) for [329] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@464daa7d), error [true], resetting
+[2014-05-04 22:17:35,523][WARN ][transport.netty          ] [huge] Message not fully read (response) for [330] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@544a7629), error [true], resetting
+[2014-05-04 22:17:35,526][WARN ][transport.netty          ] [huge] Message not fully read (response) for [331] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1f77497), error [true], resetting
+[2014-05-04 22:17:35,529][WARN ][transport.netty          ] [huge] Message not fully read (response) for [332] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d07c405), error [true], resetting
+[2014-05-04 22:17:35,533][WARN ][transport.netty          ] [huge] Message not fully read (response) for [333] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@58d63b5b), error [true], resetting
+[2014-05-04 22:17:35,549][WARN ][transport.netty          ] [huge] Message not fully read (response) for [338] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@78f7821d), error [true], resetting
+[2014-05-04 22:17:35,546][WARN ][transport.netty          ] [huge] Message not fully read (response) for [337] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5c03bb34), error [true], resetting
+[2014-05-04 22:17:35,543][WARN ][transport.netty          ] [huge] Message not fully read (response) for [336] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@ea69ae7), error [true], resetting
+[2014-05-04 22:17:35,539][WARN ][transport.netty          ] [huge] Message not fully read (response) for [335] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4e1f52a), error [true], resetting
+[2014-05-04 22:17:35,536][WARN ][transport.netty          ] [huge] Message not fully read (response) for [334] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@58d300ed), error [true], resetting
+[2014-05-04 22:17:35,559][WARN ][transport.netty          ] [huge] Message not fully read (response) for [339] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a13cae7), error [true], resetting
+[2014-05-04 22:17:35,563][WARN ][transport.netty          ] [huge] Message not fully read (response) for [340] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b0acf26), error [true], resetting
+[2014-05-04 22:17:35,566][WARN ][transport.netty          ] [huge] Message not fully read (response) for [341] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@77411b30), error [true], resetting
+[2014-05-04 22:17:35,570][WARN ][transport.netty          ] [huge] Message not fully read (response) for [342] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@637533df), error [true], resetting
+[2014-05-04 22:17:35,711][WARN ][transport.netty          ] [huge] Message not fully read (response) for [346] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7ed45f89), error [true], resetting
+[2014-05-04 22:17:35,714][WARN ][transport.netty          ] [huge] Message not fully read (response) for [347] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@28cc5c6c), error [true], resetting
+[2014-05-04 22:17:35,717][WARN ][transport.netty          ] [huge] Message not fully read (response) for [348] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@c7cb61), error [true], resetting
+[2014-05-04 22:17:35,721][WARN ][transport.netty          ] [huge] Message not fully read (response) for [349] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3cf94dad), error [true], resetting
+[2014-05-04 22:17:35,725][WARN ][transport.netty          ] [huge] Message not fully read (response) for [350] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@22013e9b), error [true], resetting
+[2014-05-04 22:17:35,728][WARN ][transport.netty          ] [huge] Message not fully read (response) for [351] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6c38d341), error [true], resetting
+[2014-05-04 22:17:35,732][WARN ][transport.netty          ] [huge] Message not fully read (response) for [352] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6b587e9), error [true], resetting
+[2014-05-04 22:17:35,733][WARN ][transport.netty          ] [huge] Message not fully read (response) for [353] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@f7f725), error [true], resetting
+[2014-05-04 22:17:35,736][WARN ][transport.netty          ] [huge] Message not fully read (response) for [354] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7ca9bd), error [true], resetting
+[2014-05-04 22:17:35,736][WARN ][transport.netty          ] [huge] Message not fully read (response) for [355] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@786bb78a), error [true], resetting
+[2014-05-04 22:17:35,740][WARN ][transport.netty          ] [huge] Message not fully read (response) for [357] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@67df02c9), error [true], resetting
+[2014-05-04 22:17:35,741][WARN ][transport.netty          ] [huge] Message not fully read (response) for [356] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@62300f65), error [true], resetting
+[2014-05-04 22:17:35,743][WARN ][transport.netty          ] [huge] Message not fully read (response) for [358] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4142e23f), error [true], resetting
+[2014-05-04 22:17:35,744][WARN ][transport.netty          ] [huge] Message not fully read (response) for [359] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3078d976), error [true], resetting
+[2014-05-04 22:17:35,746][WARN ][transport.netty          ] [huge] Message not fully read (response) for [360] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4e0cead6), error [true], resetting
+[2014-05-04 22:17:35,748][WARN ][transport.netty          ] [huge] Message not fully read (response) for [361] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@320dafa2), error [true], resetting
+[2014-05-04 22:17:35,750][WARN ][transport.netty          ] [huge] Message not fully read (response) for [362] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2085ce5a), error [true], resetting
+[2014-05-04 22:17:35,751][WARN ][transport.netty          ] [huge] Message not fully read (response) for [363] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@30ae8764), error [true], resetting
+[2014-05-04 22:17:35,753][WARN ][transport.netty          ] [huge] Message not fully read (response) for [364] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@123acf34), error [true], resetting
+[2014-05-04 22:17:35,754][WARN ][transport.netty          ] [huge] Message not fully read (response) for [365] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@52f96845), error [true], resetting
+[2014-05-04 22:17:35,763][WARN ][transport.netty          ] [huge] Message not fully read (response) for [370] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6199ffdd), error [true], resetting
+[2014-05-04 22:17:35,760][WARN ][transport.netty          ] [huge] Message not fully read (response) for [369] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ea5b721), error [true], resetting
+[2014-05-04 22:17:35,760][WARN ][transport.netty          ] [huge] Message not fully read (response) for [368] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@f7cdd50), error [true], resetting
+[2014-05-04 22:17:35,757][WARN ][transport.netty          ] [huge] Message not fully read (response) for [367] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2302d72d), error [true], resetting
+[2014-05-04 22:17:35,756][WARN ][transport.netty          ] [huge] Message not fully read (response) for [366] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@742cb491), error [true], resetting
+[2014-05-04 22:17:35,774][WARN ][transport.netty          ] [huge] Message not fully read (response) for [371] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@456d383a), error [true], resetting
+[2014-05-04 22:17:35,775][WARN ][transport.netty          ] [huge] Message not fully read (response) for [372] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5868b72), error [true], resetting
+[2014-05-04 22:17:35,777][WARN ][transport.netty          ] [huge] Message not fully read (response) for [373] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@442cec33), error [true], resetting
+[2014-05-04 22:17:35,778][WARN ][transport.netty          ] [huge] Message not fully read (response) for [374] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61472b3c), error [true], resetting
+[2014-05-04 22:17:35,781][WARN ][transport.netty          ] [huge] Message not fully read (response) for [375] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@767a209), error [true], resetting
+[2014-05-04 22:17:35,781][WARN ][transport.netty          ] [huge] Message not fully read (response) for [376] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24bf00ab), error [true], resetting
+[2014-05-04 22:17:35,784][WARN ][transport.netty          ] [huge] Message not fully read (response) for [377] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@77c4ed65), error [true], resetting
+[2014-05-04 22:17:35,785][WARN ][transport.netty          ] [huge] Message not fully read (response) for [378] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@21bdbf51), error [true], resetting
+[2014-05-04 22:17:35,788][WARN ][transport.netty          ] [huge] Message not fully read (response) for [379] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@305b7025), error [true], resetting
+[2014-05-04 22:17:35,788][WARN ][transport.netty          ] [huge] Message not fully read (response) for [380] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@431fa5f0), error [true], resetting
+[2014-05-04 22:17:35,791][WARN ][transport.netty          ] [huge] Message not fully read (response) for [381] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@52c751fd), error [true], resetting
+[2014-05-04 22:17:35,792][WARN ][transport.netty          ] [huge] Message not fully read (response) for [382] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1bd7e380), error [true], resetting
+[2014-05-04 22:17:35,795][WARN ][transport.netty          ] [huge] Message not fully read (response) for [384] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7a98f6c7), error [true], resetting
+[2014-05-04 22:17:35,795][WARN ][transport.netty          ] [huge] Message not fully read (response) for [383] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5071c1b2), error [true], resetting
+[2014-05-04 22:17:35,798][WARN ][transport.netty          ] [huge] Message not fully read (response) for [385] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5c63b660), error [true], resetting
+[2014-05-04 22:17:35,799][WARN ][transport.netty          ] [huge] Message not fully read (response) for [386] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@165a8803), error [true], resetting
+[2014-05-04 22:17:35,802][WARN ][transport.netty          ] [huge] Message not fully read (response) for [387] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1197886c), error [true], resetting
+[2014-05-04 22:17:35,802][WARN ][transport.netty          ] [huge] Message not fully read (response) for [388] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@737d7379), error [true], resetting
+[2014-05-04 22:17:35,805][WARN ][transport.netty          ] [huge] Message not fully read (response) for [389] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3128482b), error [true], resetting
+[2014-05-04 22:17:35,805][WARN ][transport.netty          ] [huge] Message not fully read (response) for [390] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4b9a1843), error [true], resetting
+[2014-05-04 22:17:35,815][WARN ][transport.netty          ] [huge] Message not fully read (response) for [395] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@24b2714a), error [true], resetting
+[2014-05-04 22:17:35,812][WARN ][transport.netty          ] [huge] Message not fully read (response) for [394] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1876e112), error [true], resetting
+[2014-05-04 22:17:35,812][WARN ][transport.netty          ] [huge] Message not fully read (response) for [393] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4ef0a363), error [true], resetting
+[2014-05-04 22:17:35,809][WARN ][transport.netty          ] [huge] Message not fully read (response) for [392] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1783d08c), error [true], resetting
+[2014-05-04 22:17:35,809][WARN ][transport.netty          ] [huge] Message not fully read (response) for [391] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71aefd7b), error [true], resetting
+[2014-05-04 22:17:35,831][WARN ][transport.netty          ] [huge] Message not fully read (response) for [396] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3f2bc418), error [true], resetting
+[2014-05-04 22:17:35,831][WARN ][transport.netty          ] [huge] Message not fully read (response) for [397] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57003d5d), error [true], resetting
+[2014-05-04 22:17:35,834][WARN ][transport.netty          ] [huge] Message not fully read (response) for [398] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@50bcd14a), error [true], resetting
+[2014-05-04 22:17:35,835][WARN ][transport.netty          ] [huge] Message not fully read (response) for [399] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1c507aaf), error [true], resetting
+[2014-05-04 22:17:35,837][WARN ][transport.netty          ] [huge] Message not fully read (response) for [400] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@67a685ae), error [true], resetting
+[2014-05-04 22:17:35,839][WARN ][transport.netty          ] [huge] Message not fully read (response) for [401] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@659297ab), error [true], resetting
+[2014-05-04 22:17:35,840][WARN ][transport.netty          ] [huge] Message not fully read (response) for [402] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b238fa5), error [true], resetting
+[2014-05-04 22:17:36,041][WARN ][transport.netty          ] [huge] Message not fully read (response) for [407] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1a39aa42), error [true], resetting
+[2014-05-04 22:17:36,044][WARN ][transport.netty          ] [huge] Message not fully read (response) for [409] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3fd8e081), error [true], resetting
+[2014-05-04 22:17:36,047][WARN ][transport.netty          ] [huge] Message not fully read (response) for [410] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@377b55e6), error [true], resetting
+[2014-05-04 22:17:36,051][WARN ][transport.netty          ] [huge] Message not fully read (response) for [411] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2448b7f), error [true], resetting
+[2014-05-04 22:17:36,054][WARN ][transport.netty          ] [huge] Message not fully read (response) for [412] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@62224002), error [true], resetting
+[2014-05-04 22:17:36,068][WARN ][transport.netty          ] [huge] Message not fully read (response) for [417] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@584edf4a), error [true], resetting
+[2014-05-04 22:17:36,065][WARN ][transport.netty          ] [huge] Message not fully read (response) for [416] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@294692c9), error [true], resetting
+[2014-05-04 22:17:36,062][WARN ][transport.netty          ] [huge] Message not fully read (response) for [415] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4dd03ed2), error [true], resetting
+[2014-05-04 22:17:36,059][WARN ][transport.netty          ] [huge] Message not fully read (response) for [414] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@170aeb17), error [true], resetting
+[2014-05-04 22:17:36,057][WARN ][transport.netty          ] [huge] Message not fully read (response) for [413] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@369875a3), error [true], resetting
+[2014-05-04 22:17:36,077][WARN ][transport.netty          ] [huge] Message not fully read (response) for [418] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2225a091), error [true], resetting
+[2014-05-04 22:17:36,079][WARN ][transport.netty          ] [huge] Message not fully read (response) for [419] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5450a11a), error [true], resetting
+[2014-05-04 22:17:36,082][WARN ][transport.netty          ] [huge] Message not fully read (response) for [420] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7980dd34), error [true], resetting
+[2014-05-04 22:17:36,084][WARN ][transport.netty          ] [huge] Message not fully read (response) for [421] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7b3abf3d), error [true], resetting
+[2014-05-04 22:17:36,087][WARN ][transport.netty          ] [huge] Message not fully read (response) for [422] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4de17cff), error [true], resetting
+[2014-05-04 22:17:36,194][WARN ][transport.netty          ] [huge] Message not fully read (response) for [425] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4b9cee52), error [true], resetting
+[2014-05-04 22:17:36,196][WARN ][transport.netty          ] [huge] Message not fully read (response) for [426] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2be27046), error [true], resetting
+[2014-05-04 22:17:36,199][WARN ][transport.netty          ] [huge] Message not fully read (response) for [427] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1f391a2c), error [true], resetting
+[2014-05-04 22:17:36,202][WARN ][transport.netty          ] [huge] Message not fully read (response) for [428] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5de54eb7), error [true], resetting
+[2014-05-04 22:17:36,204][WARN ][transport.netty          ] [huge] Message not fully read (response) for [429] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@79930089), error [true], resetting
+[2014-05-04 22:17:36,207][WARN ][transport.netty          ] [huge] Message not fully read (response) for [430] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@702b3cdb), error [true], resetting
+[2014-05-04 22:17:36,209][WARN ][transport.netty          ] [huge] Message not fully read (response) for [431] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6c22fde7), error [true], resetting
+[2014-05-04 22:17:36,212][WARN ][transport.netty          ] [huge] Message not fully read (response) for [432] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2dda6548), error [true], resetting
+[2014-05-04 22:17:36,213][WARN ][transport.netty          ] [huge] Message not fully read (response) for [433] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5d2f717c), error [true], resetting
+[2014-05-04 22:17:36,214][WARN ][transport.netty          ] [huge] Message not fully read (response) for [434] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@55c3b3af), error [true], resetting
+[2014-05-04 22:17:36,215][WARN ][transport.netty          ] [huge] Message not fully read (response) for [435] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2349d226), error [true], resetting
+[2014-05-04 22:17:36,216][WARN ][transport.netty          ] [huge] Message not fully read (response) for [436] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4383cee3), error [true], resetting
+[2014-05-04 22:17:36,218][WARN ][transport.netty          ] [huge] Message not fully read (response) for [437] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@283bbb6), error [true], resetting
+[2014-05-04 22:17:36,219][WARN ][transport.netty          ] [huge] Message not fully read (response) for [438] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1698ab04), error [true], resetting
+[2014-05-04 22:17:36,220][WARN ][transport.netty          ] [huge] Message not fully read (response) for [439] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1039f33), error [true], resetting
+[2014-05-04 22:17:36,221][WARN ][transport.netty          ] [huge] Message not fully read (response) for [440] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@14c8cdca), error [true], resetting
+[2014-05-04 22:17:36,222][WARN ][transport.netty          ] [huge] Message not fully read (response) for [441] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@b3e936f), error [true], resetting
+[2014-05-04 22:17:36,224][WARN ][transport.netty          ] [huge] Message not fully read (response) for [442] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3941622d), error [true], resetting
+[2014-05-04 22:17:36,225][WARN ][transport.netty          ] [huge] Message not fully read (response) for [443] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@739495b8), error [true], resetting
+[2014-05-04 22:17:36,226][WARN ][transport.netty          ] [huge] Message not fully read (response) for [444] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2fd0a692), error [true], resetting
+[2014-05-04 22:17:36,227][WARN ][transport.netty          ] [huge] Message not fully read (response) for [445] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2b67d3c4), error [true], resetting
+[2014-05-04 22:17:36,229][WARN ][transport.netty          ] [huge] Message not fully read (response) for [446] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2d7fff1f), error [true], resetting
+[2014-05-04 22:17:36,230][WARN ][transport.netty          ] [huge] Message not fully read (response) for [447] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2e46638f), error [true], resetting
+[2014-05-04 22:17:36,232][WARN ][transport.netty          ] [huge] Message not fully read (response) for [448] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@f325905), error [true], resetting
+[2014-05-04 22:17:36,239][WARN ][transport.netty          ] [huge] Message not fully read (response) for [453] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1b416de4), error [true], resetting
+[2014-05-04 22:17:36,236][WARN ][transport.netty          ] [huge] Message not fully read (response) for [452] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@73f025cb), error [true], resetting
+[2014-05-04 22:17:36,235][WARN ][transport.netty          ] [huge] Message not fully read (response) for [451] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@438b6281), error [true], resetting
+[2014-05-04 22:17:36,234][WARN ][transport.netty          ] [huge] Message not fully read (response) for [450] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@72beaa01), error [true], resetting
+[2014-05-04 22:17:36,232][WARN ][transport.netty          ] [huge] Message not fully read (response) for [449] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@32725f0e), error [true], resetting
+[2014-05-04 22:17:36,259][WARN ][transport.netty          ] [huge] Message not fully read (response) for [454] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6495a1b6), error [true], resetting
+[2014-05-04 22:17:36,259][WARN ][transport.netty          ] [huge] Message not fully read (response) for [455] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1babe751), error [true], resetting
+[2014-05-04 22:17:36,261][WARN ][transport.netty          ] [huge] Message not fully read (response) for [456] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@32df8508), error [true], resetting
+[2014-05-04 22:17:36,262][WARN ][transport.netty          ] [huge] Message not fully read (response) for [457] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7096ea4f), error [true], resetting
+[2014-05-04 22:17:36,264][WARN ][transport.netty          ] [huge] Message not fully read (response) for [458] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@43f12248), error [true], resetting
+[2014-05-04 22:17:36,264][WARN ][transport.netty          ] [huge] Message not fully read (response) for [459] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@c01c7d1), error [true], resetting
+[2014-05-04 22:17:36,267][WARN ][transport.netty          ] [huge] Message not fully read (response) for [461] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@48e5707f), error [true], resetting
+[2014-05-04 22:17:36,267][WARN ][transport.netty          ] [huge] Message not fully read (response) for [460] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@4f3cc73c), error [true], resetting
+[2014-05-04 22:17:36,269][WARN ][transport.netty          ] [huge] Message not fully read (response) for [462] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@1f3c5cc8), error [true], resetting
+[2014-05-04 22:17:36,270][WARN ][transport.netty          ] [huge] Message not fully read (response) for [463] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@33ef5e7d), error [true], resetting
+[2014-05-04 22:17:36,272][WARN ][transport.netty          ] [huge] Message not fully read (response) for [464] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6bfc212d), error [true], resetting
+[2014-05-04 22:17:36,272][WARN ][transport.netty          ] [huge] Message not fully read (response) for [465] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@75e648bd), error [true], resetting
+[2014-05-04 22:17:36,275][WARN ][transport.netty          ] [huge] Message not fully read (response) for [466] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61b1acc3), error [true], resetting
+[2014-05-04 22:17:36,275][WARN ][transport.netty          ] [huge] Message not fully read (response) for [467] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@57c56850), error [true], resetting
+[2014-05-04 22:17:36,277][WARN ][transport.netty          ] [huge] Message not fully read (response) for [468] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@61438934), error [true], resetting
+[2014-05-04 22:17:36,277][WARN ][transport.netty          ] [huge] Message not fully read (response) for [469] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@18e4e6cf), error [true], resetting
+[2014-05-04 22:17:36,280][WARN ][transport.netty          ] [huge] Message not fully read (response) for [471] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@5bed2ccd), error [true], resetting
+[2014-05-04 22:17:36,280][WARN ][transport.netty          ] [huge] Message not fully read (response) for [470] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@301875e1), error [true], resetting
+[2014-05-04 22:17:36,283][WARN ][transport.netty          ] [huge] Message not fully read (response) for [472] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@15e31f72), error [true], resetting
+[2014-05-04 22:17:36,283][WARN ][transport.netty          ] [huge] Message not fully read (response) for [473] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@72258097), error [true], resetting
+[2014-05-04 22:17:36,285][WARN ][transport.netty          ] [huge] Message not fully read (response) for [474] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7c1d740c), error [true], resetting
+[2014-05-04 22:17:36,285][WARN ][transport.netty          ] [huge] Message not fully read (response) for [475] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@71adff7c), error [true], resetting
+[2014-05-04 22:17:36,288][WARN ][transport.netty          ] [huge] Message not fully read (response) for [476] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@56606032), error [true], resetting
+[2014-05-04 22:17:36,293][WARN ][transport.netty          ] [huge] Message not fully read (response) for [481] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@214b5739), error [true], resetting
+[2014-05-04 22:17:36,293][WARN ][transport.netty          ] [huge] Message not fully read (response) for [480] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2f49f848), error [true], resetting
+[2014-05-04 22:17:36,290][WARN ][transport.netty          ] [huge] Message not fully read (response) for [478] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3d555cf5), error [true], resetting
+[2014-05-04 22:17:36,290][WARN ][transport.netty          ] [huge] Message not fully read (response) for [479] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@3bae7fff), error [true], resetting
+[2014-05-04 22:17:36,288][WARN ][transport.netty          ] [huge] Message not fully read (response) for [477] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@514b9eeb), error [true], resetting
+[2014-05-04 22:17:36,312][WARN ][transport.netty          ] [huge] Message not fully read (response) for [482] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@594b7042), error [true], resetting
+[2014-05-04 22:17:36,313][WARN ][transport.netty          ] [huge] Message not fully read (response) for [483] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@67b72ada), error [true], resetting
+[2014-05-04 22:17:36,315][WARN ][transport.netty          ] [huge] Message not fully read (response) for [484] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2a5e8368), error [true], resetting
+[2014-05-04 22:17:36,315][WARN ][transport.netty          ] [huge] Message not fully read (response) for [485] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@23053693), error [true], resetting
+[2014-05-04 22:17:36,317][WARN ][transport.netty          ] [huge] Message not fully read (response) for [486] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2b41fedb), error [true], resetting
+[2014-05-04 22:17:36,318][WARN ][transport.netty          ] [huge] Message not fully read (response) for [487] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@79c2f20c), error [true], resetting
+[2014-05-04 22:17:36,320][WARN ][transport.netty          ] [huge] Message not fully read (response) for [488] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@6da13047), error [true], resetting
+[2014-05-04 22:17:36,320][WARN ][transport.netty          ] [huge] Message not fully read (response) for [489] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@7168bd8b), error [true], resetting
+[2014-05-04 22:17:36,322][WARN ][transport.netty          ] [huge] Message not fully read (response) for [490] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@13742ad8), error [true], resetting
+[2014-05-04 22:17:36,323][WARN ][transport.netty          ] [huge] Message not fully read (response) for [491] handler future(org.elasticsearch.indices.recovery.RecoveryTarget$4@2fa8d4e2), error [true], resetting

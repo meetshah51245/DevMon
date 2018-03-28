@@ -1,0 +1,6 @@
+# Cluster Name is always fixed. Creating a single cluster.
+* Cluster Name						:		devMon
+
+# Possible names of nodes to choose from
+* Possible Node Names			:   [gigantic, huge, enormous, vast, extensive, giant, massive, colossal, mammoth, immense, monumental, mountainous, titanic, towering, elephantine, gargantuan, informalmega, monster, whopping, humongous, jumbo, hulking, bumper, ginormous]
+* Name Taken							:		[gigantic]
